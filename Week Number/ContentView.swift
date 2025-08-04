@@ -76,8 +76,10 @@ struct ContentView: View {
                             VStack {
                                 Text(shortWeekday(date: date))
                                     .font(.system(size: geo.size.height * 0.035))
+                                    .foregroundColor(calendar.isDateInToday(date) ? .accentColor : .secondary)
                                 Text("\(calendar.component(.day, from: date))")
                                     .font(.system(size: geo.size.height * 0.045, weight: .medium))
+                                    .foregroundColor(calendar.isDateInToday(date) ? .accentColor : .primary)
                             }
                             .frame(maxWidth: .infinity)
                         }
