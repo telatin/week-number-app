@@ -33,8 +33,7 @@ struct ContentView: View {
 
     var body: some View {
         GeometryReader { geo in
-            VStack(spacing: geo.size.height * 0.05) {
-                Spacer()
+            VStack(alignment: .center, spacing: 20) {
                 HStack(spacing: 0) {
                     Button(action: { selectedDate = calendar.date(byAdding: .weekOfYear, value: -1, to: selectedDate)! }) {
                         Image(systemName: "chevron.left")
@@ -87,9 +86,8 @@ struct ContentView: View {
                     .transition(.opacity)
                     .padding(.horizontal, geo.size.width * 0.04)
                 }
-                Spacer()
             }
-            .frame(width: geo.size.width, height: geo.size.height)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
     }
 
