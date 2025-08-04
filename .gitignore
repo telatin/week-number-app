@@ -1,0 +1,6 @@
+# Ignore backup files created by sed
+*.bak
+
+# Ignore the anonymize and deanonymize scripts
+anonymize.sh
+deanonymize.sh
